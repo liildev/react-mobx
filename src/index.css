@@ -1,0 +1,88 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;800;900&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply font-roboto bg-gray-100;
+  }
+
+  h1 {
+    @apply text-center text-4xl font-black;
+  }
+
+  h2 {
+    @apply text-3xl font-semibold;
+  }
+
+  p {
+    @apply text-gray-400;
+  }
+
+  input {
+    @apply w-full outline-none p-2 rounded;
+  }
+
+  button {
+    @apply font-semibold uppercase;
+  }
+}
+
+@layer components {
+  .flex-items-center {
+    @apply flex justify-center items-center;
+  }
+  
+  .wave {
+    width: 6px;
+    height: 100px;
+    background: linear-gradient(45deg, #ea6618, #e9e9f9);
+    margin: 10px;
+    animation: wave 1s linear infinite;
+    border-radius: 20px;
+  }
+
+  .wave:nth-child(2) {
+    animation-delay: 0.1s;
+  }
+  .wave:nth-child(3) {
+    animation-delay: 0.2s;
+  }
+  .wave:nth-child(4) {
+    animation-delay: 0.3s;
+  }
+  .wave:nth-child(5) {
+    animation-delay: 0.4s;
+  }
+  .wave:nth-child(6) {
+    animation-delay: 0.5s;
+  }
+  .wave:nth-child(7) {
+    animation-delay: 0.6s;
+  }
+  .wave:nth-child(8) {
+    animation-delay: 0.7s;
+  }
+  .wave:nth-child(9) {
+    animation-delay: 0.8s;
+  }
+  .wave:nth-child(10) {
+    animation-delay: 0.9s;
+  }
+}
+
+@layer utilities {
+  @keyframes wave {
+    0% {
+      transform: scale(0);
+    }
+    50% {
+      transform: scale(1);
+    }
+    100% {
+      transform: scale(0);
+    }
+  }
+}
