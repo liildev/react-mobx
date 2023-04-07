@@ -16,10 +16,11 @@ export const Header = observer(() => {
 
   return (
     <header className="bg-white border-gray-200 dark:bg-gray-900">
-      <div className="max-w-screen-xl flex items-center mx-auto p-4">
+      <div className="max-w-screen-xl flex items-center justify-between mx-auto p-4">
         <Logo />
 
-        {loginStore.getUserDetails && (
+       <div>
+       {loginStore.getUserDetails && (
           <span className="ml-auto mr-5">
             Welcome{" "}
             <p className="font-black inline uppercase">
@@ -40,7 +41,8 @@ export const Header = observer(() => {
               Sign In
             </button>
           </Link>
-        )}{" "}
+        )}
+       </div>
       </div>
     </header>
   );
